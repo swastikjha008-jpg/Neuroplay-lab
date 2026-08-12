@@ -1,0 +1,62 @@
+<svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="duskSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#160a33"/>
+      <stop offset="40%" stop-color="#3a1a5c"/>
+      <stop offset="75%" stop-color="#7a3a6a"/>
+      <stop offset="100%" stop-color="#c9663f"/>
+    </linearGradient>
+    <linearGradient id="dGround" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#241a44"/>
+      <stop offset="100%" stop-color="#0d0a1e"/>
+    </linearGradient>
+    <linearGradient id="dFarB" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2c2058"/>
+      <stop offset="100%" stop-color="#1a1436"/>
+    </linearGradient>
+    <filter id="dbGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="900" height="300" fill="url(#duskSky)"/>
+
+  <!-- sun/moon disc -->
+  <circle cx="700" cy="90" r="36" fill="#ffd9a0" opacity="0.85" filter="url(#dbGlow)"/>
+
+  <!-- distant skyline -->
+  <g fill="url(#dFarB)">
+    <rect x="0" y="150" width="40" height="90"/>
+    <rect x="50" y="120" width="30" height="120"/>
+    <rect x="90" y="160" width="45" height="80"/>
+    <rect x="600" y="140" width="35" height="100"/>
+    <rect x="650" y="110" width="30" height="130"/>
+    <rect x="750" y="155" width="50" height="85"/>
+    <rect x="820" y="130" width="40" height="110"/>
+  </g>
+  <g fill="#38d8ff" opacity="0.6">
+    <rect x="8" y="165" width="4" height="6"/><rect x="60" y="140" width="4" height="6"/>
+    <rect x="610" y="160" width="4" height="6"/><rect x="830" y="150" width="4" height="6"/>
+  </g>
+
+  <!-- ground -->
+  <rect x="0" y="240" width="900" height="60" fill="url(#dGround)"/>
+  <line x1="0" y1="240" x2="900" y2="240" stroke="#38d8ff" stroke-width="2" opacity="0.6" filter="url(#dbGlow)"/>
+  <!-- ground grid ticks -->
+  <g stroke="#7fe9ff" stroke-width="1.5" opacity="0.35">
+    <line x1="20" y1="240" x2="20" y2="255"/><line x1="90" y1="240" x2="90" y2="255"/>
+    <line x1="160" y1="240" x2="160" y2="255"/><line x1="230" y1="240" x2="230" y2="255"/>
+    <line x1="300" y1="240" x2="300" y2="255"/><line x1="370" y1="240" x2="370" y2="255"/>
+    <line x1="440" y1="240" x2="440" y2="255"/><line x1="510" y1="240" x2="510" y2="255"/>
+    <line x1="580" y1="240" x2="580" y2="255"/><line x1="650" y1="240" x2="650" y2="255"/>
+    <line x1="720" y1="240" x2="720" y2="255"/><line x1="790" y1="240" x2="790" y2="255"/>
+    <line x1="860" y1="240" x2="860" y2="255"/>
+  </g>
+
+  <!-- stars fading in -->
+  <g fill="#ffffff" opacity="0.6">
+    <circle cx="100" cy="30" r="1"/><circle cx="250" cy="20" r="1.2"/><circle cx="400" cy="40" r="1"/>
+    <circle cx="500" cy="15" r="1.1"/>
+  </g>
+</svg>

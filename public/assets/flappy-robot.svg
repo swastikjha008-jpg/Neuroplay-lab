@@ -1,0 +1,112 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bodyGrad" cx="35%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#f4f8ff"/>
+      <stop offset="45%" stop-color="#dbe6f7"/>
+      <stop offset="75%" stop-color="#a9bfe0"/>
+      <stop offset="100%" stop-color="#7e94c2"/>
+    </radialGradient>
+
+    <radialGradient id="eyeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#eafcff"/>
+      <stop offset="35%" stop-color="#4fe0ff"/>
+      <stop offset="75%" stop-color="#0aa6e8"/>
+      <stop offset="100%" stop-color="#0a6ea8"/>
+    </radialGradient>
+
+    <radialGradient id="ringGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="70%" stop-color="#38d8ff" stop-opacity="0"/>
+      <stop offset="90%" stop-color="#38d8ff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#38d8ff" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="flameGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c9f4ff" stop-opacity="0.95"/>
+      <stop offset="45%" stop-color="#4fd8ff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#2f7dff" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="thrusterMetal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#eef3ff"/>
+      <stop offset="100%" stop-color="#9fb3d6"/>
+    </linearGradient>
+
+    <linearGradient id="antennaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#dfe9fb"/>
+      <stop offset="100%" stop-color="#93a8d1"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="strongGlow" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ambient hover shadow -->
+  <ellipse cx="200" cy="345" rx="70" ry="14" fill="#1a2a55" opacity="0.35"/>
+
+  <!-- thruster flames -->
+  <g filter="url(#softGlow)">
+    <path d="M138 258 Q132 300 140 335 Q150 305 152 262 Z" fill="url(#flameGrad)"/>
+    <path d="M262 258 Q268 300 260 335 Q250 305 248 262 Z" fill="url(#flameGrad)"/>
+  </g>
+
+  <!-- side thrusters -->
+  <g>
+    <rect x="118" y="205" width="26" height="60" rx="10" fill="url(#thrusterMetal)" stroke="#5c7ab0" stroke-width="2"/>
+    <rect x="256" y="205" width="26" height="60" rx="10" fill="url(#thrusterMetal)" stroke="#5c7ab0" stroke-width="2"/>
+    <circle cx="131" cy="252" r="6" fill="#38d8ff" filter="url(#softGlow)"/>
+    <circle cx="269" cy="252" r="6" fill="#38d8ff" filter="url(#softGlow)"/>
+  </g>
+
+  <!-- antenna -->
+  <g>
+    <rect x="196" y="55" width="8" height="42" rx="4" fill="url(#antennaGrad)" stroke="#5c7ab0" stroke-width="1.5"/>
+    <circle cx="200" cy="50" r="10" fill="#38d8ff" filter="url(#strongGlow)"/>
+    <circle cx="200" cy="50" r="5" fill="#eafcff"/>
+  </g>
+
+  <!-- body -->
+  <circle cx="200" cy="205" r="118" fill="url(#bodyGrad)" stroke="#6d86b8" stroke-width="3"/>
+
+  <!-- panel seams -->
+  <path d="M90 205 A110 110 0 0 1 310 205" fill="none" stroke="#c3d2ee" stroke-width="2" opacity="0.7"/>
+  <path d="M118 150 Q200 120 282 150" fill="none" stroke="#c3d2ee" stroke-width="2" opacity="0.5"/>
+
+  <!-- cheek accent lines -->
+  <path d="M92 220 Q80 205 92 188" fill="none" stroke="#38d8ff" stroke-width="4" stroke-linecap="round" opacity="0.85" filter="url(#softGlow)"/>
+  <path d="M308 220 Q320 205 308 188" fill="none" stroke="#38d8ff" stroke-width="4" stroke-linecap="round" opacity="0.85" filter="url(#softGlow)"/>
+
+  <!-- eye housing -->
+  <circle cx="200" cy="205" r="72" fill="#16213f"/>
+  <circle cx="200" cy="205" r="72" fill="none" stroke="#3a4d80" stroke-width="3"/>
+
+  <!-- eye glow ring -->
+  <circle cx="200" cy="205" r="80" fill="url(#ringGlow)"/>
+
+  <!-- eye -->
+  <circle cx="200" cy="205" r="52" fill="url(#eyeGlow)" filter="url(#strongGlow)"/>
+  <circle cx="200" cy="205" r="52" fill="none" stroke="#eafcff" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- eye highlight -->
+  <ellipse cx="182" cy="185" rx="14" ry="9" fill="#ffffff" opacity="0.9"/>
+  <ellipse cx="220" cy="222" rx="7" ry="5" fill="#ffffff" opacity="0.5"/>
+
+  <!-- lower belly light -->
+  <ellipse cx="200" cy="295" rx="34" ry="10" fill="#0e1730"/>
+  <ellipse cx="200" cy="295" rx="22" ry="6" fill="#38d8ff" filter="url(#softGlow)" opacity="0.9"/>
+
+  <!-- rim light -->
+  <path d="M96 145 A118 118 0 0 1 200 87" fill="none" stroke="#eafcff" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
+</svg>

@@ -1,0 +1,50 @@
+<svg viewBox="0 0 200 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pillarMetal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2a3560"/>
+      <stop offset="15%" stop-color="#4d5f9c"/>
+      <stop offset="50%" stop-color="#6d84c9"/>
+      <stop offset="85%" stop-color="#4d5f9c"/>
+      <stop offset="100%" stop-color="#232c50"/>
+    </linearGradient>
+    <linearGradient id="pillarCore" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38d8ff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#7fe9ff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#38d8ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="capMetal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8fa3d9"/>
+      <stop offset="100%" stop-color="#3d4a80"/>
+    </linearGradient>
+    <filter id="pGlow" x="-100%" y="-30%" width="300%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- TOP PILLAR (0 to 220), gap 220-380, BOTTOM PILLAR (380 to 600) -->
+
+  <!-- top pillar shaft -->
+  <rect x="55" y="0" width="90" height="200" fill="url(#pillarMetal)" stroke="#1c2444" stroke-width="2"/>
+  <rect x="80" y="0" width="16" height="200" fill="url(#pillarCore)" filter="url(#pGlow)"/>
+  <!-- top pillar cap -->
+  <rect x="35" y="190" width="130" height="34" rx="8" fill="url(#capMetal)" stroke="#1c2444" stroke-width="2"/>
+  <rect x="35" y="215" width="130" height="10" fill="#38d8ff" filter="url(#pGlow)" opacity="0.85"/>
+
+  <!-- bottom pillar shaft -->
+  <rect x="55" y="400" width="90" height="200" fill="url(#pillarMetal)" stroke="#1c2444" stroke-width="2"/>
+  <rect x="80" y="400" width="16" height="200" fill="url(#pillarCore)" filter="url(#pGlow)"/>
+  <!-- bottom pillar cap -->
+  <rect x="35" y="376" width="130" height="34" rx="8" fill="url(#capMetal)" stroke="#1c2444" stroke-width="2"/>
+  <rect x="35" y="375" width="130" height="10" fill="#38d8ff" filter="url(#pGlow)" opacity="0.85"/>
+
+  <!-- rivets -->
+  <circle cx="60" cy="30" r="3" fill="#1c2444"/>
+  <circle cx="140" cy="30" r="3" fill="#1c2444"/>
+  <circle cx="60" cy="170" r="3" fill="#1c2444"/>
+  <circle cx="140" cy="170" r="3" fill="#1c2444"/>
+  <circle cx="60" cy="430" r="3" fill="#1c2444"/>
+  <circle cx="140" cy="430" r="3" fill="#1c2444"/>
+  <circle cx="60" cy="570" r="3" fill="#1c2444"/>
+  <circle cx="140" cy="570" r="3" fill="#1c2444"/>
+</svg>

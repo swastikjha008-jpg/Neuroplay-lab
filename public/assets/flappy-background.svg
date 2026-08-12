@@ -1,0 +1,91 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f2e"/>
+      <stop offset="45%" stop-color="#1a1a4d"/>
+      <stop offset="75%" stop-color="#3a1f6b"/>
+      <stop offset="100%" stop-color="#5a2a7a"/>
+    </linearGradient>
+    <radialGradient id="moonGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fdf6ff"/>
+      <stop offset="70%" stop-color="#d8c8ff"/>
+      <stop offset="100%" stop-color="#a98fe0" stop-opacity="0.3"/>
+    </radialGradient>
+    <linearGradient id="farBuild" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a2a5c"/>
+      <stop offset="100%" stop-color="#1a1a3d"/>
+    </linearGradient>
+    <linearGradient id="nearBuild" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1c1c40"/>
+      <stop offset="100%" stop-color="#0d0d24"/>
+    </linearGradient>
+    <filter id="bgGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="900" height="500" fill="url(#skyGrad)"/>
+
+  <!-- stars -->
+  <g fill="#ffffff">
+    <circle cx="60" cy="40" r="1.4" opacity="0.9"/>
+    <circle cx="130" cy="80" r="1" opacity="0.7"/>
+    <circle cx="220" cy="30" r="1.2" opacity="0.8"/>
+    <circle cx="340" cy="60" r="1" opacity="0.6"/>
+    <circle cx="500" cy="25" r="1.3" opacity="0.85"/>
+    <circle cx="600" cy="70" r="1" opacity="0.6"/>
+    <circle cx="700" cy="35" r="1.4" opacity="0.9"/>
+    <circle cx="820" cy="55" r="1" opacity="0.7"/>
+    <circle cx="870" cy="20" r="1.2" opacity="0.8"/>
+  </g>
+
+  <!-- moon -->
+  <circle cx="740" cy="90" r="46" fill="url(#moonGrad)" filter="url(#bgGlow)"/>
+
+  <!-- distant mountains -->
+  <path d="M0 300 L100 250 L200 290 L320 240 L420 285 L520 245 L640 280 L760 235 L900 275 L900 500 L0 500 Z" fill="#241a4a" opacity="0.55"/>
+
+  <!-- far skyline -->
+  <g fill="url(#farBuild)">
+    <rect x="20" y="260" width="40" height="140"/>
+    <rect x="70" y="230" width="30" height="170"/>
+    <rect x="110" y="280" width="50" height="120"/>
+    <rect x="180" y="240" width="35" height="160"/>
+    <rect x="230" y="270" width="45" height="130"/>
+    <rect x="600" y="250" width="40" height="150"/>
+    <rect x="650" y="220" width="30" height="180"/>
+    <rect x="700" y="265" width="55" height="135"/>
+    <rect x="780" y="235" width="35" height="165"/>
+  </g>
+
+  <!-- near skyline with lit windows -->
+  <g>
+    <rect x="330" y="180" width="60" height="220" fill="url(#nearBuild)"/>
+    <rect x="400" y="140" width="45" height="260" fill="url(#nearBuild)"/>
+    <rect x="455" y="200" width="70" height="200" fill="url(#nearBuild)"/>
+    <rect x="535" y="160" width="50" height="240" fill="url(#nearBuild)"/>
+    <rect x="0" y="200" width="55" height="200" fill="url(#nearBuild)"/>
+    <rect x="835" y="190" width="65" height="210" fill="url(#nearBuild)"/>
+  </g>
+
+  <!-- windows -->
+  <g fill="#38d8ff" opacity="0.85">
+    <rect x="340" y="200" width="6" height="8"/><rect x="355" y="200" width="6" height="8"/><rect x="370" y="200" width="6" height="8"/>
+    <rect x="340" y="225" width="6" height="8"/><rect x="370" y="225" width="6" height="8"/>
+    <rect x="410" y="165" width="6" height="8"/><rect x="425" y="165" width="6" height="8"/>
+    <rect x="410" y="195" width="6" height="8"/><rect x="425" y="195" width="6" height="8"/>
+    <rect x="470" y="220" width="6" height="8"/><rect x="490" y="220" width="6" height="8"/><rect x="505" y="220" width="6" height="8"/>
+    <rect x="545" y="185" width="6" height="8"/><rect x="560" y="185" width="6" height="8"/>
+  </g>
+  <g fill="#b98bff" opacity="0.7">
+    <rect x="10" y="225" width="6" height="8"/><rect x="30" y="240" width="6" height="8"/>
+    <rect x="845" y="215" width="6" height="8"/><rect x="865" y="230" width="6" height="8"/>
+  </g>
+
+  <!-- holographic billboard -->
+  <rect x="455" y="180" width="60" height="16" rx="2" fill="#ff4fd8" opacity="0.5" filter="url(#bgGlow)"/>
+
+  <!-- fog -->
+  <rect x="0" y="400" width="900" height="100" fill="#2a1f55" opacity="0.35"/>
+</svg>

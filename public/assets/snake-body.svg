@@ -1,0 +1,30 @@
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="sBody" cx="35%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#e8edfc"/>
+      <stop offset="100%" stop-color="#7e94c2"/>
+    </radialGradient>
+    <filter id="sbGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- three connected segments -->
+  <g>
+    <rect x="6" y="18" width="24" height="64" rx="16" fill="url(#sBody)" stroke="#5c73b3" stroke-width="2.5"/>
+    <circle cx="18" cy="50" r="8" fill="#38d8ff" filter="url(#sbGlow)"/>
+  </g>
+  <g>
+    <rect x="88" y="10" width="24" height="80" rx="18" fill="url(#sBody)" stroke="#5c73b3" stroke-width="2.5"/>
+    <circle cx="100" cy="50" r="9" fill="#38d8ff" filter="url(#sbGlow)"/>
+  </g>
+  <g>
+    <rect x="170" y="18" width="24" height="64" rx="16" fill="url(#sBody)" stroke="#5c73b3" stroke-width="2.5"/>
+    <circle cx="182" cy="50" r="8" fill="#38d8ff" filter="url(#sbGlow)"/>
+  </g>
+
+  <!-- flexible joint connectors -->
+  <rect x="30" y="42" width="58" height="16" rx="8" fill="#3a4a80" opacity="0.85"/>
+  <rect x="112" y="42" width="58" height="16" rx="8" fill="#3a4a80" opacity="0.85"/>
+</svg>

@@ -1,0 +1,112 @@
+@import "@xyflow/react/dist/style.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --background: #050816;
+  --foreground: #eafcff;
+  --font-space: "Space Grotesk", "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(56, 216, 255, 0.13), transparent 28rem),
+    radial-gradient(circle at 82% 4%, rgba(185, 139, 255, 0.12), transparent 24rem),
+    linear-gradient(135deg, #050816 0%, #080b22 42%, #0f1230 100%);
+  color: var(--foreground);
+  font-family: var(--font-space), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(56, 216, 255, 0.35);
+}
+
+.lab-grid {
+  background-image:
+    linear-gradient(rgba(56, 216, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 216, 255, 0.08) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent 84%);
+}
+
+.glass {
+  border: 1px solid rgba(127, 233, 255, 0.18);
+  background: linear-gradient(180deg, rgba(14, 23, 48, 0.78), rgba(8, 11, 34, 0.62));
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(22px);
+}
+
+.cyan-glow {
+  filter: drop-shadow(0 0 14px rgba(56, 216, 255, 0.6));
+}
+
+.game-canvas {
+  image-rendering: auto;
+}
+
+.react-flow__node {
+  border: 0;
+  background: transparent;
+}
+
+.react-flow__handle {
+  opacity: 0;
+}
+
+.react-flow__controls {
+  overflow: hidden;
+  border: 1px solid rgba(127, 233, 255, 0.22);
+  border-radius: 8px;
+  background: rgba(5, 8, 22, 0.92);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.react-flow__controls-button {
+  width: 28px;
+  height: 28px;
+  border-bottom: 1px solid rgba(127, 233, 255, 0.16);
+  background: #0b1430;
+  color: #7fe9ff;
+  fill: #7fe9ff;
+}
+
+.react-flow__controls-button:hover {
+  background: #10214a;
+}
+
+.react-flow__controls-button:last-child {
+  border-bottom: 0;
+}
+
+.fullscreen-shell:fullscreen {
+  width: 100%;
+  max-width: none;
+  min-height: 100%;
+  overflow: auto;
+  background: #050816;
+  padding: 24px;
+}

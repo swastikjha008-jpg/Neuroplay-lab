@@ -1,0 +1,40 @@
+<svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#eafcff"/>
+      <stop offset="35%" stop-color="#4fe0ff"/>
+      <stop offset="75%" stop-color="#0aa6e8"/>
+      <stop offset="100%" stop-color="#0a6ea8" stop-opacity="0.4"/>
+    </radialGradient>
+    <radialGradient id="coreHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="60%" stop-color="#38d8ff" stop-opacity="0"/>
+      <stop offset="85%" stop-color="#38d8ff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#38d8ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="coreBlur" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <circle cx="80" cy="80" r="70" fill="url(#coreHalo)"/>
+
+  <!-- electric particles -->
+  <g stroke="#7fe9ff" stroke-width="2" opacity="0.7" filter="url(#coreBlur)">
+    <line x1="80" y1="10" x2="80" y2="26"/>
+    <line x1="80" y1="134" x2="80" y2="150"/>
+    <line x1="10" y1="80" x2="26" y2="80"/>
+    <line x1="134" y1="80" x2="150" y2="80"/>
+    <line x1="30" y1="30" x2="42" y2="42"/>
+    <line x1="118" y1="118" x2="130" y2="130"/>
+    <line x1="30" y1="130" x2="42" y2="118"/>
+    <line x1="118" y1="42" x2="130" y2="30"/>
+  </g>
+
+  <!-- crystal facets -->
+  <polygon points="80,35 110,80 80,125 50,80" fill="url(#coreGlow)" filter="url(#coreBlur)"/>
+  <polygon points="80,35 110,80 80,80" fill="#ffffff" opacity="0.25"/>
+  <polygon points="80,80 80,125 50,80" fill="#0a6ea8" opacity="0.3"/>
+
+  <circle cx="70" cy="65" r="7" fill="#ffffff" opacity="0.85"/>
+</svg>
